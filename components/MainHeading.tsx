@@ -45,7 +45,6 @@ const H = () => {
           fontFamily: "inherit",
         }}
       >
-        {" "}
         Blüten
       </h1>
     </div>

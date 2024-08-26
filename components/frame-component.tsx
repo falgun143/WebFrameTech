@@ -5,14 +5,12 @@ import CheckboxTag from "./checkbox-tag";
 import FrameComponent1 from "./frame-component1";
 import Button from "./button";
 
-
 export type FrameComponentType = {
-
   secondtag?: boolean;
   img?: string;
   tHC24?: string;
   navcoraTHCSpotlightPortoMast?: string;
- maintag?: string;
+  maintag?: string;
   propBackgroundColor?: string;
   propBackgroundColor1?: string;
   propColor?: string;
@@ -46,16 +44,11 @@ const FrameComponent: NextPage<FrameComponentType> = ({
   propBorder,
   propBoxShadow,
   propGap,
-  propAlignSelf,
-  propWidth,
   secondtag,
-  propAlignSelf1,
-  propWidth1,
-  propMinWidth1,
   img,
   propBorder1,
   navcoraTHCSpotlightPortoMast,
- maintag,
+  maintag,
   propBackgroundColor,
   propBackgroundColor1,
   propColor,
@@ -81,10 +74,6 @@ const FrameComponent: NextPage<FrameComponentType> = ({
       ...getStyleValue("gap", propGap),
     };
   }, [propGap]);
-
-
-
-
 
   const bodyStyle: CSSProperties = useMemo(() => {
     return {
@@ -126,7 +115,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({
         <Availability
           propBackgroundColor={propBackgroundColor}
           propBackgroundColor1={propBackgroundColor1}
-         maintag={maintag}
+          maintag={maintag}
           propColor={propColor}
           propMinWidth={propMinWidth}
         />
@@ -266,17 +255,16 @@ const FrameComponent: NextPage<FrameComponentType> = ({
                   color: "#116a6c",
                 }}
               >
-          
                 <CheckboxTag
-                 text={`THC 18%`}
+                  text={`THC 18%`}
                   propFlex={propFlex}
                   select={select}
                   setSelect={setSelect}
                   propMinWidth={propMinWidth2}
                 />
-               
+
                 <CheckboxTag
-                 text={`CBD <1%`}
+                  text={`CBD <1%`}
                   propFlex={propFlex}
                   select={select}
                   setSelect={setSelect}

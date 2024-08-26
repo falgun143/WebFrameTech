@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 
 export type PointType = {
-  className?: string;
   text?: string;
   propBackgroundColor?: CSSProperties["backgroundColor"];
   propColor?: CSSProperties["color"];

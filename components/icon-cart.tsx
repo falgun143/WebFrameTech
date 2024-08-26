@@ -1,10 +1,6 @@
-import type { NextPage } from "next";
 
-export type IconCartType = {
-  className?: string;
-};
 
-const IconCart: NextPage<IconCartType> = ({ className = "" }) => {
+const IconCart = () => {
   return (
     <div
       style={{
@@ -16,7 +12,6 @@ const IconCart: NextPage<IconCartType> = ({ className = "" }) => {
         color: "#28e3e9",
         fontFamily: "Sora",
       }}
-      className={className}
     >
       <div
         style={{

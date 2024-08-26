@@ -1,19 +1,17 @@
-import type { NextPage } from "next";
 import Point from "./point";
 import IconCart from "./icon-cart";
 import Button2 from "./button2";
-import { IconButton, TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 const HeaderDesktop = () => {
   return (
-    <header
+    <Box
       style={{
         alignSelf: "stretch",
         borderRadius: "24px",
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        flexWrap: "wrap",
         gap: "30px",
         maxWidth: "100%",
         textAlign: "left",
@@ -21,30 +19,23 @@ const HeaderDesktop = () => {
         color: "#62c3c6",
         fontFamily: "Sora",
       }}
-    
+  
     >
-      <img
-        style={{
-          height: "44px",
-          width: "107.7px",
-          position: "relative",
-          overflow: "hidden",
-          flexShrink: "0",
-          display: "none",
-        }}
-        alt=""
-        src="/logo.svg"
-      />
-      <div
+      <Box
         style={{
           flex: "1",
           display: "flex",
-          flexWrap: "wrap",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "flex-start",
           gap: "30px",
           maxWidth: "100%",
         }}
+        sx={{
+          flexDirection:{
+           xs:"column",
+           lg:"row"
+          }
+         }}
       >
         {/* Search Bar */}
         <form
@@ -198,8 +189,8 @@ const HeaderDesktop = () => {
             <Button2 />
           </div>
         </div>
-      </div>
-    </header>
+      </Box>
+    </Box>
   );
 };
 

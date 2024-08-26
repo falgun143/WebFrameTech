@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 
 export type CheckboxTagType = {
-  className?: string;
   propFlex?: CSSProperties["flex"];
   text: string;
   propMinWidth?: CSSProperties["minWidth"];
@@ -16,7 +15,6 @@ const getStyleValue = (key: string, value: string | number | undefined) => {
 };
 
 const CheckboxTag: NextPage<CheckboxTagType> = ({
-  className = "",
   propFlex,
   text,
   propMinWidth,
@@ -56,7 +54,6 @@ const CheckboxTag: NextPage<CheckboxTagType> = ({
         ...checkboxTagStyle,
       }}
       onClick={handleClick}
-      className={className}
     >
       <div
         style={{

@@ -7,7 +7,6 @@ import Slider, {
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 export type SlideType = {
-  className?: string;
   text?: string;
   prop?: string;
   prop1?: string;
@@ -80,7 +79,6 @@ function AirbnbThumbComponent(props: AirbnbThumbComponentProps) {
 }
 
 const Slide: NextPage<SlideType> = ({
-  className = "",
   text,
   prop,
   propMinWidth,
@@ -115,7 +113,6 @@ const Slide: NextPage<SlideType> = ({
         color: "#365758",
         fontFamily: "Sora",
       }}
-      className={className}
     >
       <div
         style={{

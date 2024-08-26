@@ -1,111 +1,115 @@
-import type { NextPage } from "next";
+import { Box } from "@mui/material";
 
-export type PaginationType = {
-  className?: string;
-};
-
-const Pagination: NextPage<PaginationType> = ({ className = "" }) => {
+const Pagination = () => {
   return (
-    <div
+    <Box
       style={{
-        width: "262px",
+        width: "100%",
         display: "flex",
-        flexDirection: "row",
-        alignItems: "flex-start",
-        justifyContent: "flex-start",
-        gap: "30px",
-        textAlign: "left",
+       
         fontSize: "18px",
         color: "#045a5c",
         fontFamily: "Sora",
       }}
-      className={className}
+      sx={{
+        justifyContent:{
+          xs:"center",
+          md:"flex-end"
+        }
+      }}
     >
-      <img
-        style={{
-          height: "20px",
-          width: "20px",
-          position: "relative",
-          overflow: "hidden",
-          flexShrink: "0",
-          objectFit: "contain",
-        }}
-        alt=""
-        src="/checkboxiconarrowright-2.svg"
-      />
       <div
         style={{
-          flex: "1",
           display: "flex",
-          flexDirection: "row",
-          alignItems: "flex-start",
-          justifyContent: "space-between",
-          gap: "20px",
+          gap: "30px",
         }}
       >
+        <img
+          style={{
+            height: "20px",
+            width: "20px",
+            position: "relative",
+            overflow: "hidden",
+            flexShrink: "0",
+            objectFit: "contain",
+          }}
+          alt=""
+          src="/checkboxiconarrowright-2.svg"
+        />
         <div
           style={{
-            position: "relative",
-            fontWeight: "600",
-            display: "inline-block",
-            minWidth: "8px",
+            flex: "1",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: "20px",
           }}
         >
-          1
+          <div
+            style={{
+              position: "relative",
+              fontWeight: "600",
+              display: "inline-block",
+              minWidth: "8px",
+            }}
+          >
+            1
+          </div>
+          <div
+            style={{
+              position: "relative",
+              fontWeight: "600",
+              display: "inline-block",
+              minWidth: "12px",
+            }}
+          >
+            2
+          </div>
+          <div
+            style={{
+              position: "relative",
+              fontWeight: "600",
+              display: "inline-block",
+              minWidth: "12px",
+            }}
+          >
+            3
+          </div>
+          <div
+            style={{
+              position: "relative",
+              fontWeight: "600",
+              display: "inline-block",
+              minWidth: "15px",
+            }}
+          >
+            ...
+          </div>
+          <div
+            style={{
+              position: "relative",
+              fontWeight: "600",
+              display: "inline-block",
+              minWidth: "19px",
+            }}
+          >
+            12
+          </div>
         </div>
-        <div
+        <img
           style={{
+            height: "20px",
+            width: "20px",
             position: "relative",
-            fontWeight: "600",
-            display: "inline-block",
-            minWidth: "12px",
+            overflow: "hidden",
+            flexShrink: "0",
           }}
-        >
-          2
-        </div>
-        <div
-          style={{
-            position: "relative",
-            fontWeight: "600",
-            display: "inline-block",
-            minWidth: "12px",
-          }}
-        >
-          3
-        </div>
-        <div
-          style={{
-            position: "relative",
-            fontWeight: "600",
-            display: "inline-block",
-            minWidth: "15px",
-          }}
-        >
-          ...
-        </div>
-        <div
-          style={{
-            position: "relative",
-            fontWeight: "600",
-            display: "inline-block",
-            minWidth: "19px",
-          }}
-        >
-          12
-        </div>
+          alt=""
+          src="/checkboxiconarrowright.svg"
+        />
       </div>
-      <img
-        style={{
-          height: "20px",
-          width: "20px",
-          position: "relative",
-          overflow: "hidden",
-          flexShrink: "0",
-        }}
-        alt=""
-        src="/checkboxiconarrowright.svg"
-      />
-    </div>
+    </Box>
   );
 };
 

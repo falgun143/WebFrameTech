@@ -2,7 +2,6 @@
 import {
   Select,
   InputLabel,
-  FormHelperText,
   FormControl,
   MenuItem,
   NativeSelect,
@@ -11,7 +10,7 @@ import {
   TextField,
   Box,
 } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 import HeaderDesktop from "./header";
 import HeaderLinks from "./headerlinks";
 import H from "./MainHeading";
@@ -22,22 +21,6 @@ import CheckboxLine from "./checkbox-line";
 import FrameComponent from "./frame-component";
 import Pagination from "./pagination";
 import React, { useState } from "react";
-
-const CustomNativeSelect = styled(NativeSelect)({
-  "&:before": {
-    borderBottom: "none",
-  },
-  "&:after": {
-    borderBottom: "none",
-  },
-  "&:hover:not(.Mui-disabled):before": {
-    borderBottom: "none",
-  },
-  "& .MuiNativeSelect-icon": {
-    color: "#62C3C6",
-    fontSize: "30px",
-  },
-});
 
 const Header = () => {
   const [showcheckbox, setShowcheckbox] = useState(false);
@@ -237,6 +220,7 @@ const Header = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
+                flexWrap:"wrap",
                 alignItems: "flex-start",
                 justifyContent: "flex-start",
                 gap: "20px",
@@ -253,7 +237,7 @@ const Header = () => {
                   flexDirection: "column",
                   alignItems: "flex-start",
                   justifyContent: "flex-start",
-                 
+
                   gap: "9px",
                   maxWidth: "172px",
                 }}
@@ -265,10 +249,9 @@ const Header = () => {
                     display: "flex",
                     maxWidth: "172px",
                     justifyContent: "space-between",
-                    alignItems:"center",
-                    gap:"7px",
-                    padding:"2px 10px"
-                    
+                    alignItems: "center",
+                    gap: "7px",
+                    padding: "2px 10px",
                   }}
                 >
                   <div> Sortieren nach</div>
@@ -382,21 +365,22 @@ const Header = () => {
         <Box
           style={{
             display: "flex",
-            flexWrap:"wrap",
+            flexWrap: "wrap",
             gap: "80px",
             maxWidth: "100%",
             fontSize: "24px",
             color: "#045a5c",
           }}
           sx={{
-            flexDirection:{
-              xs:"column",
-              md:"row"
+            flexDirection: {
+              xs: "column",
+              md: "row",
             },
             alignItems:{
-              xs:"center",
-              md:"flex-start"
+              xs:"flex-start",
+              sm:"center"
             }
+        
           }}
         >
           <div
@@ -810,33 +794,6 @@ const Header = () => {
                     </FormControl>
                   )}
                 </div>
-
-                {/* <CustomNativeSelect
-                      style={{
-                        color: "#365758",
-                        fontFamily: "Sora",
-                        fontWeight: "bold",
-                        fontSize: "22px",
-                        width:"100%",
-                        alignSelf:"stretch"
-                      }}
-                      IconComponent={(props) => (
-                        <ArrowDropDownIcon
-                          {...props}
-                          style={{
-                            fill: "none",
-                            stroke: "#62C3C6",
-                            strokeWidth: 2,
-                            fontSize: "30px",
-                          }}
-                        />
-                      )}
-                    >
-                      <option>Terpene</option>
-                      <option>Harz</option>
-                      <option>Duftstoff</option>
-                      <option>Phytonzid</option>
-                    </CustomNativeSelect> */}
               </div>
               <div
                 style={{
@@ -1169,10 +1126,11 @@ const Header = () => {
                 />
               </div>
             </div>
-            <Pagination />
+           
           </div>
         </Box>
       </div>
+      <Pagination />
     </section>
   );
 };
