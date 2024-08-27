@@ -886,7 +886,7 @@ const Header = () => {
                 sx={{
                   justifyContent: {
                     xs: "flex-start",
-                    md: "center",
+                    sm: "center",
                   }
                 }}
               >
