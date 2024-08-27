@@ -376,11 +376,11 @@ const Header = () => {
               xs: "column",
               md: "row",
             },
-            alignItems:{
-              xs:"flex-start",
-              sm:"center"
-            }
-        
+            alignItems: {
+              xs: "flex-start",
+              sm: "center",
+              md: "flex-start",
+            },
           }}
         >
           <div
@@ -853,7 +853,7 @@ const Header = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               gap: "40px",
               maxWidth: "calc(100% - 330px)",
               fontSize: "12px",
@@ -871,18 +871,23 @@ const Header = () => {
                 maxWidth: "100%",
               }}
             >
-              <div
+              <Box
                 style={{
                   width: "970px",
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "flex-start",
-                  justifyContent: "flex-start",
                   flexWrap: "wrap",
                   alignContent: "flex-start",
                   gap: "20px 18px",
                   minHeight: "1702px",
                   maxWidth: "100%",
+                }}
+                sx={{
+                  justifyContent: {
+                    xs: "flex-start",
+                    md: "center",
+                  }
                 }}
               >
                 <FrameComponent
@@ -1124,9 +1129,8 @@ const Header = () => {
                   indica1="Hybrid"
                   propMinWidth3="56px"
                 />
-              </div>
+              </Box>
             </div>
-           
           </div>
         </Box>
       </div>
